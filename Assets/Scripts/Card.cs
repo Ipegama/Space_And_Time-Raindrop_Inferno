@@ -4,5 +4,16 @@ using UnityEngine;
 
 public abstract class Card : MonoBehaviour
 {
-    [field: SerializeField] private int manaCost { get; set; }
+    public int manaCost = 0;
+    public Owner owner;
+
+    public virtual void Use()
+    {
+
+    }
+
+    public Owner ChangeTarget()
+    {
+        return (Owner)((int)owner * -1);
+    }
 }
