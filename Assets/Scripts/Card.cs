@@ -16,4 +16,16 @@ public abstract class Card : MonoBehaviour
     {
         return (Owner)((int)owner * -1);
     }
+
+    private void OnMouseEnter()
+    {
+        transform.Translate(0f, 1f, -1f);
+        transform.Rotate(-15f,0f, 0f);
+    }
+
+    private void OnMouseExit()
+    {
+        transform.Translate(0f, -1f, 1f);
+        transform.Rotate( 15f,0f, 0f);
+    }
 }
